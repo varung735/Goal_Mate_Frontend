@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import users from '../api-calls/users';
+import Snackbar from '../components/Snackbar';
 
 function Login() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function Login() {
   return (
     <>
         <Navbar pageProp={'login'}/>
+        <Snackbar />
         <div className='h-[90vh] p-2 flex justify-center'>
           {/* Image Holder */}
           <div className='hidden h-full md:w-1/2 lg:w-3/4 md:block md:bg-login md:bg-contain lg:bg-cover md:bg-no-repeat md:bg-center'></div>
