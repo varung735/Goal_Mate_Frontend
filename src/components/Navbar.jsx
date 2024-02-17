@@ -36,6 +36,21 @@ function Navbar({ pageProp }) {
         { (pageProp === 'home-page' || pageProp === 'login') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
           <Link className='font-nunito font-semi-bold text-2xl' to={`/signup`}>Signup</Link>
         </div> }
+        { (pageProp === 'user' || pageProp === 'admin') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
+          <Link className='font-nunito font-semi-bold text-2xl' to={`tasks`}>Tasks</Link>
+        </div> }
+        { (pageProp === 'user' || pageProp === 'admin') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
+          <Link className='font-nunito font-semi-bold text-2xl' to={`expenses`}>Expenses</Link>
+        </div> }
+        { (pageProp === 'user' || pageProp === 'admin') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
+          <Link className='font-nunito font-semi-bold text-2xl' to={`journals`}>Journals</Link>
+        </div> }
+        { (pageProp === 'user' || pageProp === 'admin') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
+          <Link className='font-nunito font-semi-bold text-2xl' to={`profile`}>Profile</Link>
+        </div> }
+        {/* { (pageProp === 'user' || pageProp === 'admin') && <div className='w-full h-16 flex justify-center items-center border-t-2 border-white'>
+          <Link className='font-nunito font-semi-bold text-2xl' to={`profile`}>Log Out</Link>
+        </div> } */}
       </div> }
     </nav>
   )

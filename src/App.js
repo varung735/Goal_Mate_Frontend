@@ -7,6 +7,10 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import EmailVerification from './pages/EmailVerification';
 import Error from './components/Error';
+import Tasks from './pages/Tasks';
+import Expenses from './pages/Expenses';
+import Journals from './pages/Journals';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -16,9 +20,19 @@ function App() {
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/signup' element={<Signup />} />
         <Route exact path='/verify' element={<EmailVerification />} />
-        <Route exact path='/user' element={<UserDashboard />} />
-        <Route exact path='/admin' element={<AdminDashboard />} />
-        <Route exact path='/error' element={<Error message={'Some Error Message'}/>} />
+        <Route exact path='/user' element={<UserDashboard />}>
+          <Route exact path='tasks' element={<Tasks />} />
+          <Route exact path='expenses' element={<Expenses />} />
+          <Route exact path='journals' element={<Journals />} />
+          <Route exact path='profile' element={<Profile />} />
+        </Route>
+        <Route exact path='/admin' element={<AdminDashboard />} >
+          <Route exact path='tasks' element={<Tasks />} />
+          <Route exact path='expenses' element={<Expenses />} />
+          <Route exact path='journals' element={<Journals />} />
+          <Route exact path='profile' element={<Profile />} />
+        </Route>
+        <Route exact path='*' element={<Error message={'Page doesnot exists'}/>} />
       </Routes>
     </BrowserRouter>
   );

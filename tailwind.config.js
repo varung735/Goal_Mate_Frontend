@@ -6,12 +6,14 @@ module.exports = {
     './src/components/Footer.jsx',
     './src/components/SideNav.jsx',
     './src/components/Error.jsx',
-    './src/components/SnackBar.jsx',
+    './src/components/Snackbar.jsx',
     './src/components/home-page/Banner.jsx',
     './src/components/home-page/FeatureOne.jsx',
     './src/components/home-page/FeatureTwo.jsx',
     './src/components/home-page/FeatureThree.jsx',
     './src/components/home-page/AboutUs.jsx',
+    './src/components/tasks/TaskGroup.jsx',
+    './src/components/tasks/Task.jsx',
     // Pages
     './src/pages/HomePage.jsx',
     './src/pages/Login.jsx',
@@ -19,12 +21,18 @@ module.exports = {
     './src/pages/EmailVerification.jsx',
     './src/pages/AdminDashboard.jsx',
     './src/pages/UserDashboard.jsx',
+    './src/pages/Tasks.jsx',
+    './src/pages/Expenses.jsx',
+    './src/pages/Journals.jsx',
+    './src/pages/Profile.jsx'
   ],
   theme: {
     extend: {
       colors: {
         'grey': '#F7F7F8',
-        'yellow': '#FFD93D'
+        'yellow': '#FFD93D',
+        'success': '#56AE57',
+        'error': '#FF0000'
       },
       fontFamily: {
         nunito: ['Nunito, sans-serif'],
